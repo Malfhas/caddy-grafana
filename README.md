@@ -318,7 +318,7 @@ It can nevertheless serve as a basis for making your own Dashoard
 
 ![Dashboard2](https://github.com/Malfhas/caddy-grafana/assets/13700925/8238c33e-9556-42ba-8de7-82edf3934073)
 
-Dashboard link : Coming soon...
+Dashboard link : https://grafana.com/grafana/dashboards/20802
 
 
 
