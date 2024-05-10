@@ -111,14 +111,14 @@ sudo nano /etc/prometheus/prometheus.yml
 ```
 
 Added lines below "scrape_configs":
-```console
+```yaml
 - job_name: caddy
-      static_configs:
+static_configs:
           - targets: ['localhost:2019']
 ```
 
 You should have a configuration similar to this:
-```
+```yaml
 # Sample config for Prometheus.
 
 global:
@@ -199,7 +199,7 @@ sudo nano /etc/promtail/config.yml
 ```
 
 Add the following lines at the end of the file:
-```console
+```yaml
 - job_name: caddy
   static_configs:
   - targets:
@@ -219,7 +219,7 @@ Add the following lines at the end of the file:
 ```
 
 You should have a configuration similar to this:
-```
+```yaml
 # This minimal config scrape only single log file.
 # Primarily used in rpm/deb packaging where promtail service can be started during system init process.
 # And too much scraping during init process can overload the complete system.
@@ -274,6 +274,8 @@ Check that the services is active:
 sudo systemctl status promtail
 sudo systemctl status loki
 ```
+
+**P.S. Make sure that the user promtail has permissions to read caddy logs.**
 
 # Grafana setup
 ## Installing Grafana
